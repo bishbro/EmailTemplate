@@ -396,13 +396,13 @@
                     <td>
                         <div class="contact">
                             <div class="contact-list">
-                            INVOICE #001
+                            INVOICE #{{order.order_uuid}}
                         </div>
                         <div class="contact-list">
                             BILLING TO:
                         </div>
                         <div class="contact-list">
-                            RANDOMNUMBER123
+                            {{order.user.email}}
                         </div>
                         </div>
                     </td>
@@ -434,29 +434,29 @@
                           </tr>
                         </thead>
                         <tbody>
-                            <!-- {% for order_product in order.products.all %} -->
+                            {% for order_product in order.products.all %}
 
                           <tr>
                             <td style="text-transform: capitalize;">
-                                <!-- {{ order_product.product }} -->
+                                {{ order_product.product }}
                             </td>
                             <td>
-                                <!-- {{ order_product.quantity }} -->
+                                {{ order_product.quantity }}
                             </td>
                             <td>
-                                 <!-- {{ order_product.rate }} -->
+                                 {{ order_product.rate }}
                             </td>
                             <td style="border-right: 1px solid #eee;">
-                                <!-- {% if order_product.final_price_usd %}
+                                {% if order_product.final_price_usd %}
                                  {{ order_product.final_price }} USD
                                  {% else %}
                                  Rs. {{ order_product.final_price }} 
-                                 {% endif %} -->
+                                 {% endif %}
                             </td>
                           </tr>
-                          <!-- {% endfor %} -->
+                          {% endfor %}
 
-                          <!-- <tr>
+                          <tr>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
                             <td style="font-weight: 600;">
@@ -484,11 +484,11 @@
                             </td>
                             <td style="border-right: 1px solid #eee;">
 
-                                <!-- {% if order.total_usd %}
+                                {% if order.total_usd %}
                                 {{ order.total_usd }} USD
                                 {% else %}
                                 Rs. {{ order.total }} 
-                                {% endif %} -->
+                                {% endif %}
                               </td>
                           </tr>
                           
@@ -501,7 +501,7 @@
                               PAYMENT INFO
                             </td>
                             <td>
-                                <!-- {{order.payment.payment_method}} -->
+                                {{order.payment.payment_method}}
                             </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -511,7 +511,7 @@
                               Payment ID:
                             </td>
                             <td>
-                                <!-- {{order.payment.payment_user_id}} -->
+                                {{order.payment.payment_user_id}}
                             </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -548,19 +548,19 @@
                     <div class="contact">
                         <div class="contact-list">
                             <span>
-                                <img src="call.png" alt="">
+                                <img src="https://akkugg.s3.ap-south-1.amazonaws.com/static/images/call.png" alt="">
                             </span>
                             +977 9803639464
                         </div>
                          <div class="contact-list">
                             <span>
-                                <img src="email.png" alt="">
+                                <img src="https://akkugg.s3.ap-south-1.amazonaws.com/static/images/email.png" alt="">
                             </span>
                             support@akku.gg
                         </div>
                          <div class="contact-list">
                             <span>
-                                <img src="pin.png" alt="">
+                                <img src="https://akkugg.s3.ap-south-1.amazonaws.com/static/images/pin.png" alt="">
                             </span>
                             Thimi -1, Bhaktapur - Nepal
                         </div>
